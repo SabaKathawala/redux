@@ -11,7 +11,6 @@ Each branch is a different app.
 
 ## What is being used?
 - NPM
-- Node
 - React
 - Redux
 - Babel
