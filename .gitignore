@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+
+# everything else I wanted to ignore
+.idea/codeStyles/
+.idea/externalDependencies.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/redux.iml
+.idea/vcs.xml
+dist/

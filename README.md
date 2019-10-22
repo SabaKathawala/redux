@@ -1,5 +1,6 @@
 # redux
-Redux and React
+
+This repository is a collection of React apps built using redux.
 
 1. Run `npm install`
 
@@ -13,4 +14,4 @@ Some useful findings:
 
 Running your react app: https://medium.com/@vikasharry03/react-setup-on-local-computer-912f9a551af3
 package-lock vs package.json
-https://medium.com/coinmonks/everything-you-wanted-to-know-about-package-lock-json-b81911aa8ab8
+npx
