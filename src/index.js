@@ -13,7 +13,7 @@ import App from './components/App'
 // creating redux store
 const store = createStore(rootReducers)
 
-//<Provider> is a special React Redux component that makes the store available to all container components
+//<Provider> is a special React Redux component that makes the store available to all `container components`
 // in the application without passing it explicitly. You only need to use it once when you render the root component
 
 render(

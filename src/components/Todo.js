@@ -1,5 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DeleteTodo from "./DeleteTodo";
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import ListGroup from 'react-bootstrap/ListGroup'
 
 /**
  *
@@ -15,21 +19,32 @@ import PropTypes from 'prop-types';
  *   onClick() is a callback to invoke when the todo is clicked.
  */
 
-const Todo = ({ onClick, completed, text }) => (
-    <li
-        onClick={onClick}
-        style={{
-            textDecoration: completed ? 'line-through' : 'none'
-        }}
-    >
-        {text}
-    </li>
+const Todo = ({ id, onClick, completed, text, deleteTodo }) => (
+    <ListGroup.Item>
+        <Row>
+            <Col>
+                <span
+                    onClick={onClick}
+                    style={{
+                        textDecoration: completed ? 'line-through' : 'none'
+                    }}
+                >
+                    {text}
+                </span>
+            </Col>
+            <Col>
+                <DeleteTodo onClick={() => deleteTodo(id)} />
+            </Col>
+        </Row>
+    </ListGroup.Item>
 );
 
 Todo.propTypes = {
+    id: PropTypes.number.isRequired,
     onClick: PropTypes.func.isRequired,
+    deleteTodo: PropTypes.func.isRequired,
     completed: PropTypes.bool.isRequired,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
 };
 
 export default Todo
