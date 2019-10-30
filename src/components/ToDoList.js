@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Todo from './Todo'
-import ListGroup from 'react-bootstrap/ListGroup'
+import Table from 'react-bootstrap/Table'
+import '../css/App.css'
+import {ListGroup} from "react-bootstrap";
 
 /**
  *
@@ -15,12 +17,19 @@ import ListGroup from 'react-bootstrap/ListGroup'
  *  onTodoClick(id: number) is a callback to invoke when a todo is clicked.
  */
 
-const TodoList = ({ todos, toggleTodo, deleteTodo }) => (
-    <ListGroup>
-        {todos.map(todo => (
-            <Todo key={todo.id} {...todo} deleteTodo={deleteTodo} onClick={() => toggleTodo(todo.id)} />
-        ))}
-    </ListGroup>
+const TodoList = ({ todos, toggleTodo, deleteTodo}) => (
+    <div className="todo-list">
+        <ListGroup variant={"flush"}>
+                {todos.map(todo => (
+                    <Todo
+                        key={todo.id}
+                        {...todo}
+                        deleteTodo={deleteTodo}
+                        onClick={() => toggleTodo(todo.id)}
+                    />
+                ))}
+        </ListGroup>
+    </div>
 );
 
 TodoList.propTypes = {

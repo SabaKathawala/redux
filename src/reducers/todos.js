@@ -15,10 +15,20 @@ const todos = (state = [], action) => {
             );
 
         case 'DELETE_TODO':
+        {
             const deleteIndex = state.findIndex(obj => obj.id === action.id);
             const newState = [...state];
-            console.log(newState.splice(deleteIndex, 1));
+            newState.splice(deleteIndex, 1);
             return newState;
+        }
+
+
+        case 'EDIT_TODO':
+            const editIndex = state.findIndex(obj => obj.id === action.id);
+            const newState = [...state];
+            newState[editIndex] = action.newValue;
+            return newState;
+
         default:
             return state
     }

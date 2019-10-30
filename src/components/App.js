@@ -5,6 +5,8 @@ import VisibleTodoList from '../containers/VisibleTodoList'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import PageHeader from "./PageHeader";
+import PageFooter from "./PageFooter";
 
 /**
  *
@@ -17,17 +19,33 @@ const App = () => (
     <Container>
         <Row>
             <Col>
-                <AddTodo />
+                <PageHeader app_name={'Todo App'} />
             </Col>
         </Row>
+        <hr/>
         <Row>
             <Col>
-                <VisibleTodoList />
+                <Row>
+                    <Col>
+                        <AddTodo />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <VisibleTodoList />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Footer />
+                    </Col>
+                </Row>
             </Col>
         </Row>
+        <hr/>
         <Row>
             <Col>
-                <Footer />
+                <PageFooter />
             </Col>
         </Row>
     </Container>

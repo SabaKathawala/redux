@@ -5,12 +5,6 @@ export const addTodo = text => ({
     text
 });
 
-// deletes completed todos
-export const deleteTodo = id => ({
-    type: 'DELETE_TODO',
-    id
-});
-
 export const setVisibilityFilter = filter => ({
     type: 'SET_VISIBILITY_FILTER',
     filter
@@ -18,6 +12,12 @@ export const setVisibilityFilter = filter => ({
 
 export const toggleTodo = id => ({
     type: 'TOGGLE_TODO',
+    id
+});
+
+// deletes completed todos
+export const deleteTodo = id => ({
+    type: 'DELETE_TODO',
     id
 });
 

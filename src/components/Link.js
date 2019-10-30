@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Button from "react-bootstrap/Button";
 
 /**
  *
@@ -14,16 +15,31 @@ import PropTypes from 'prop-types'
  */
 
 const Link = ({ active, children, onClick }) => (
-    <button
+    <Button
         onClick={onClick}
         disabled={active}
         style={{
             marginLeft: '4px'
         }}
+        variant={getVariant(children)}
     >
         {children}
-    </button>
+    </Button>
 );
+
+const getVariant = (children) => {
+    console.log(children);
+    switch(children) {
+        case 'Active':
+            return 'outline-primary';
+        case 'All':
+            return 'outline-info';
+        case 'Completed':
+            return 'outline-success';
+        default:
+            return 'outline-light';
+    }
+}
 
 Link.propTypes = {
     active: PropTypes.bool.isRequired,
