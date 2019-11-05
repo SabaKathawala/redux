@@ -25,7 +25,7 @@ const WebPackInfo = () => (
             </Card.Header>
             <Accordion.Collapse eventKey="0">
                 <Card.Body>
-                    Webpack fun fact: Right click and do <strong>Inspect element</strong>.
+                    Right click and select <strong>Inspect element</strong>.
                     You will see a <em><code>&lt;script type="text/javascript" src="main.js">&lt;/script></code></em>.
                     This was added by webpack.
                 </Card.Body>
